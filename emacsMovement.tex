@@ -1,0 +1,45 @@
+\documentclass[a4paper]{article}
+
+\usepackage[landscape]{geometry}
+\usepackage[absolute]{textpos}
+
+\usepackage{fontspec}
+%\setmainfont{Helvetica}
+%\setmonofont{Menlo}
+
+%\usepackage[colorgrid,texcoord]{eso-pic}
+
+\pagestyle{empty}
+
+\TPGrid[15mm,10mm]{9}{9}
+
+\newcommand{\bind}[2]{\begin{tabular}{c} \huge{\texttt{#1}} \\ \Large{#2} \end{tabular}}
+\newcommand{\mybox}[3]{\centering \begin{textblock}{1}[0.5,0.5](#1,#2) #3 \end{textblock}}
+
+\begin{document}
+  \textblockorigin{0cm}{0cm}
+
+  \mybox{5}{5}{\bind{C-l}{center}}
+
+  \mybox{5}{4}{\bind{C-p}{line}}
+  \mybox{5}{6}{\bind{C-n}{line}}
+  \mybox{5}{3}{\bind{M-v}{screen}}
+  \mybox{5}{7}{\bind{C-v}{screen}}
+  \mybox{5}{2}{\bind{M-<}{buffer start}}
+  \mybox{5}{8}{\bind{M->}{buffer end}}
+
+  \mybox{4}{5}{\bind{C-b}{character}}
+  \mybox{6}{5}{\bind{C-f}{character}}
+  \mybox{3}{5}{\bind{M-b}{word}}
+  \mybox{7}{5}{\bind{M-f}{word}}
+  \mybox{2}{5}{\bind{C-a}{line start}}
+  \mybox{8}{5}{\bind{C-e}{line end}}
+
+  \mybox{1}{5}{\Huge{back}}
+  \mybox{9}{5}{\Huge{forward}}
+
+  \mybox{5}{1}{\Huge{previous}}
+  \mybox{5}{9}{\Huge{next}}
+
+
+\end{document}
