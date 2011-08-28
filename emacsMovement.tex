@@ -4,8 +4,8 @@
 \usepackage[absolute]{textpos}
 
 \usepackage{fontspec}
-%\setmainfont{Helvetica}
-%\setmonofont{Menlo}
+\setmainfont{Helvetica}
+\setmonofont{Menlo}
 
 %\usepackage[colorgrid,texcoord]{eso-pic}
 
@@ -32,8 +32,14 @@
   \mybox{6}{5}{\bind{C-f}{character}}
   \mybox{3}{5}{\bind{M-b}{word}}
   \mybox{7}{5}{\bind{M-f}{word}}
+  \mybox{3}{6}{\bind{C-M-b}{sexp}}
+  \mybox{7}{6}{\bind{C-M-f}{sexp}}
   \mybox{2}{5}{\bind{C-a}{line start}}
   \mybox{8}{5}{\bind{C-e}{line end}}
+  \mybox{2}{4}{\bind{M-a}{sentence}}
+  \mybox{8}{4}{\bind{M-e}{sentence}}
+  \mybox{2}{6}{\bind{C-M-a}{function}}
+  \mybox{8}{6}{\bind{C-M-e}{function}}
 
   \mybox{1}{5}{\Huge{back}}
   \mybox{9}{5}{\Huge{forward}}
