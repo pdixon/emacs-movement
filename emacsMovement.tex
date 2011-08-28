@@ -8,12 +8,15 @@
 \setmonofont{Menlo}
 
 %\usepackage[colorgrid,texcoord]{eso-pic}
+\usepackage{color}
+\definecolor{gray}{gray}{0.7}
 
 \pagestyle{empty}
 
 \TPGrid[15mm,10mm]{9}{9}
 
-\newcommand{\bind}[2]{\begin{tabular}{c} \huge{\texttt{#1}} \\ \Large{#2} \end{tabular}}
+\newcommand{\bind}[2]{\begin{tabular}{c} \huge{\texttt{#1}} \\ \textcolor{gray}{\Large{#2}} \end{tabular}}
+\newcommand{\mylabel}[1]{\textcolor{gray}{\Huge{#1}}}
 \newcommand{\mybox}[3]{\centering \begin{textblock}{1}[0.5,0.5](#1,#2) #3 \end{textblock}}
 
 \begin{document}
@@ -41,11 +44,11 @@
   \mybox{2}{6}{\bind{C-M-a}{function}}
   \mybox{8}{6}{\bind{C-M-e}{function}}
 
-  \mybox{1}{5}{\Huge{back}}
-  \mybox{9}{5}{\Huge{forward}}
+  \mybox{1}{5}{\mylabel{back}}
+  \mybox{9}{5}{\mylabel{forward}}
 
-  \mybox{5}{1}{\Huge{previous}}
-  \mybox{5}{9}{\Huge{next}}
+  \mybox{5}{1}{\mylabel{previous}}
+  \mybox{5}{9}{\mylabel{next}}
 
 
 \end{document}
